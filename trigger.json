@@ -1,0 +1,18 @@
+{
+    "name": "trigger",
+    "description": "generic submodel offering the capability to trigger something",
+    "revision": "0.0.2",
+    "operations": {
+        "trigger": {
+            "parameters": {},
+            "response": {
+                "type": "string"
+            }
+        }
+    },
+    "events": {
+        "triggered": {
+            "parameters": {}
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "six_axis_robot",
+  "description": "delivers the six joint angles of a six axis robot like APAS. Unit is to be rad.", 
+  "revision": "0.0.2",
+  "properties": {
+    "joint1": {
+      "type": "number"
+    },
+    "joint2": {
+      "type": "number"
+    },
+    "joint3": {
+      "type": "number"
+    },
+    "joint4": {
+      "type": "number"
+    },
+    "joint5": {
+      "type": "number"
+    },
+    "joint6": {
+      "type": "number"
+    }
+  }
+}
