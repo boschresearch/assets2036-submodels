@@ -31,8 +31,10 @@
           }
         },
         "confidence": {
-          "description": "an information about the confidence of the current position estimation",
-          "type": "number"
+          "description": "an information about the confidence of the current position estimation. value between 0 and 1 (limits inclusive)",
+          "type": "number", 
+          "minimum": 0.0, 
+          "maximum": 1.0
         }
       }
     }
