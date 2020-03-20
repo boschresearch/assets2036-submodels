@@ -52,7 +52,7 @@ The different submodel elements are then communicated as follows:
   Events additionally send a timestamp to denote the time the event occured.
   The complete payload for an event is therefore encoded as an json object:
 
-  `{"timestamp": <timstamp as iso8691 string>, "params": <specified parameters as json object>}`
+  `{"timestamp": <timestamp as iso8691 string>, "params": <specified parameters as json object>}`
   
 
 - Operations
