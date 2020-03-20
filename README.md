@@ -148,7 +148,6 @@ The payload of this meta property holds information about the submodel specifica
     "submodel_url": <url to json-file holding the submodel specification>,
     "submodel_definition": <submodel specification as json object>,
     "source": <name of the actual asset that sends this data>
-    }
 }
 
 ```
