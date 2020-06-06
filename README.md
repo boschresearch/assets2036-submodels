@@ -132,7 +132,7 @@ An asset "lamp_1" located at the arena2036 would communicate as follows
   
   | Topic | payload |
   | ------ | ------ |
-  | `arena2036/lamp_1/light/switch_light/RESP` | `{"red_id": "66e8e766-4e6b-45a3-b1d8-3b574237e8b2", "resp": true}` |
+  | `arena2036/lamp_1/light/switch_light/RESP` | `{"red_id": "266e8e766-4e6b-45a3-b1d8-3b574237e8b2", "resp": true}` |
   
 
 ### Self description and discovery
