@@ -160,6 +160,13 @@ Following the above example, the asset "lamp_1" would need to send:
 | ------ | ------ |
 | `arena2036/lamp_1/light/_meta` | `{"submodel_url": "https://.../light.json", "submodel_definition": {"name": "light", ...}, "source": "lamp_1"}` |
 
+## Live Demo
+A live version to experiment with is available at mqtt.eclipseprojects.io. To access it with [mosquitto](https://mosquitto.org/) and see all changes and interactions use 
+```
+mosquitto_sub -h mqtt.eclipseprojects.io -t arena2036/lamp_1/#
+```
+
+
 
 ## License
 
