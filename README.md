@@ -132,7 +132,7 @@ An asset "lamp_1" located at the arena2036 would communicate as follows
   
   | Topic | payload |
   | ------ | ------ |
-  | `arena2036/lamp_1/light/switch_light/RESP` | `{"red_id": "266e8e766-4e6b-45a3-b1d8-3b574237e8b2", "resp": true}` |
+  | `arena2036/lamp_1/light/switch_light/RESP` | `{"req_id": "266e8e766-4e6b-45a3-b1d8-3b574237e8b2", "resp": true}` |
   
 
 ### Self description and discovery
@@ -163,7 +163,7 @@ Following the above example, the asset "lamp_1" would need to send:
 ## Live Demo
 A live version to experiment with is available at mqtt.eclipseprojects.io. To access it with [mosquitto](https://mosquitto.org/) and see all changes and interactions use 
 ```
-mosquitto_sub -h mqtt.eclipseprojects.io -t arena2036/lamp_1/#
+mosquitto_sub -v -h mqtt.eclipseprojects.io -t arena2036/lamp_1/#
 ```
 
 
