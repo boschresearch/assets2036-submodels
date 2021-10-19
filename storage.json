@@ -1,0 +1,77 @@
+{
+  "name": "storage",
+  "revision": "0.0.1",
+  "description": "store asset elements or arbitrary values in a database",
+  "operations": {
+    "register_property": {
+      "description": "register property for logging",
+      "parameters": {
+        "namespace": { "type": "string" },
+        "asset": {
+          "type": "string"
+        },
+        "submodel": {
+          "type": "string"
+        },
+        "property_name": {
+          "type": "string"
+        }
+      }
+    },
+    "register_event": {
+      "description": "register event for logging",
+      "parameters": {
+        "namespace": {
+          "type": "string"
+        },
+        "asset": {
+          "type": "string"
+        },
+        "submodel": {
+          "type": "string"
+        },
+        "event_name": {
+          "type": "string"
+        }
+      }
+    },
+    "register_operation": {
+      "description": "register operation for logging",
+      "parameters": {
+        "namespace": {
+          "type": "string"
+        },
+        "asset": {
+          "type": "string"
+        },
+        "submodel": {
+          "type": "string"
+        },
+        "operation_name": {
+          "type": "string"
+        }
+      }
+    },
+    "store_single_value": {
+      "description": "store a single data value with given tags",
+      "parameters": {
+        "value_name": { "type": "string" },
+        "value": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "register_raw_topic": {
+      "description": "register a topic for logging",
+      "parameters": {
+        "topic": { "type": "string" }
+      }
+    }
+  }
+}

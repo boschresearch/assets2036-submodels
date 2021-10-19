@@ -1,0 +1,40 @@
+{
+  "name": "_endpoint",
+  "revision": "0.0.3",
+  "description": "Meldet Online- und Healthy-Status eines Assets",
+  "properties": {
+    "online": {
+      "description": "Asset ist online, der Adapter ist erreichbar",
+      "type": "boolean"
+    },
+    "healthy": {
+      "description": "Asset ist healthy, der Adapter ist bereit",
+      "type": "boolean"
+    }
+  },
+  "events": {
+    "log": {
+      "description": "Logging Event",
+      "parameters": {
+        "entry": {
+          "description": "Logging Text",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "operations": {
+    "shutdown": {
+      "description": "Asset ausschalten",
+      "parameters": {}
+    },
+    "restart": {
+      "description": "Asset neu starten",
+      "parameters": {}
+    },
+	"ping": {
+	  "description": "Ping Asset",
+    "parameters": {}
+	  }
+  }
+}

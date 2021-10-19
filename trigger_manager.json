@@ -1,0 +1,30 @@
+{
+  "name": "trigger_manager",
+  "description": "manage trigger assets",
+  "revision": "0.0.1",
+  "properties": {
+    "active_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "operations": {
+    "create_trigger": {
+      "parameters": {
+        "name": {
+          "type": "string",
+          "description": "name of the trigger"
+        },
+        "persist": {
+          "type": "boolean",
+          "description": "keep trigger after restart"
+        }
+      },
+      "response": {
+        "type": "boolean"
+      }
+    }
+  }
+}

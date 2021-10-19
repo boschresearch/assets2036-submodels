@@ -52,7 +52,7 @@ The different submodel elements are then communicated as follows:
   Events additionally send a timestamp to denote the time the event occured.
   The complete payload for an event is therefore encoded as an json object:
 
-  `{"timestamp": <timstamp as iso8691 string>, "params": <specified parameters as json object>}`
+  `{"timestamp": <timestamp as iso8691 string>, "params": <specified parameters as json object>}`
   
 
 - Operations
@@ -132,7 +132,7 @@ An asset "lamp_1" located at the arena2036 would communicate as follows
   
   | Topic | payload |
   | ------ | ------ |
-  | `arena2036/lamp_1/light/switch_light/RESP` | `{"red_id": "66e8e766-4e6b-45a3-b1d8-3b574237e8b2", "resp": true}` |
+  | `arena2036/lamp_1/light/switch_light/RESP` | `{"req_id": "266e8e766-4e6b-45a3-b1d8-3b574237e8b2", "resp": true}` |
   
 
 ### Self description and discovery
@@ -148,7 +148,6 @@ The payload of this meta property holds information about the submodel specifica
     "submodel_url": <url to json-file holding the submodel specification>,
     "submodel_definition": <submodel specification as json object>,
     "source": <name of the actual asset that sends this data>
-    }
 }
 
 ```
@@ -160,6 +159,13 @@ Following the above example, the asset "lamp_1" would need to send:
 | Topic | payload |
 | ------ | ------ |
 | `arena2036/lamp_1/light/_meta` | `{"submodel_url": "https://.../light.json", "submodel_definition": {"name": "light", ...}, "source": "lamp_1"}` |
+
+## Live Demo
+A live version to experiment with is available at mqtt.eclipseprojects.io. To access it with [mosquitto](https://mosquitto.org/) and see all changes and interactions use 
+```
+mosquitto_sub -v -h mqtt.eclipseprojects.io -t arena2036/lamp_1/#
+```
+
 
 
 ## License
