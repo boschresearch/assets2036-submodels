@@ -1,0 +1,35 @@
+{
+  "name": "pose3d",
+  "revision": "0.0.2",
+  "description": "The pose (position and orientation) of a body in 3d-space.", 
+  "properties": {
+    "base": {
+      "description": "The base coordinate system of this pose. See submodel / service \"coordinates\"", 
+      "type": "string"
+    }, 
+    "pose": {
+      "type": "object", 
+      "description": "The relative pose given by \"position\" and \"orientation\".", 
+      "properties": {
+        "position": {
+          "description": "The position in 3D-space given as 3d-vector [x, y, z]", 
+          "type": "array", 
+          "minItems": 3, 
+          "maxItems": 3, 
+          "items": {
+            "type": "number"
+          }
+        }, 
+        "orientation": {
+          "description": "The orientation in 3D-space given as quaternion [w, x, y, z]", 
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}
