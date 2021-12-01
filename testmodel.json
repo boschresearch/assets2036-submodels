@@ -1,0 +1,241 @@
+{
+    "name": "testmodel",
+    "description": "Submodel offers functionality dummy fetaures for testings of libraries.", 
+    "revision": "0.0.1",
+    "properties": {
+        "string": {
+            "type": "string"
+        }, 
+        "integer": {
+            "type": "integer"
+        }, 
+        "number": {
+            "type": "number"
+        }, 
+        "boolean" :
+        {
+            "type": "boolean"
+        }, 
+        "array_of_integer": {
+            "type": "array", 
+            "items": {
+                "type": "integer"
+            }
+        }, 
+        "array_of_number": {
+            "type": "array", 
+            "items": {
+                "type": "number"
+            }
+        }, 
+        "array_of_string": {
+            "type": "array", 
+            "items": {
+                "type": "string"
+            }
+        },
+        "person": {
+            "type": "object", 
+            "properties": {
+                "name": {
+                    "type": "string"
+                }, 
+                "age": {
+                    "type": "integer"
+                }, 
+                "weight": {
+                    "type": "number"
+                }, 
+                "nice" : {
+                    "type": "boolean"
+                }, 
+                "arrayOfInteger": {
+                    "type": "array", 
+                    "items": {
+                        "type": "integer"
+                    }
+                } 
+            }
+        }
+    },
+    "operations": {
+        "void": {
+            "parameters": {}
+        }, 
+        "getBool": {
+            "parameters": {}, 
+            "response": {
+                "type": "boolean"
+            }
+        }, 
+        "setBool": {
+            "parameters": {
+                "param_1": {
+                    "type": "boolean"
+                }
+            }
+        }, 
+        "getNumber": {
+            "parameters": {}, 
+            "response": {
+                "type": "number"
+            }
+        }, 
+        "setNumber": {
+            "parameters": {
+                "param_1": {
+                    "type": "number"
+                }
+            }, 
+            "response": {
+                "type": "number"
+            }
+        }, 
+        "getInteger": {
+            "parameters": {}, 
+            "response": {
+                "type": "integer"
+            }
+        }, 
+        "setInteger": {
+            "parameters": {
+                "param_1": {
+                    "type": "integer"
+                }
+            }
+        }, 
+        "getString": {
+            "parameters": {}, 
+            "response": {
+                "type": "string"
+            }
+        }, 
+        "setString": {
+            "parameters": {
+                "param_1": {
+                    "type": "string"
+                }
+            }
+        }, 
+        "setArrayOfNumber" :{
+            "parameters": {
+                "param_1": {
+                    "type": "array", 
+                    "items": {
+                        "type": "array", 
+                        "items": {
+                            "type": "number"
+                        }
+                    }
+                }
+            }
+        }, 
+        "getArrayOfNumber" :{
+            "parameters": {}, 
+            "response": {
+                "type": "array", 
+                "items": {
+                    "type": "array", 
+                    "items": {
+                        "type": "number"
+                    }
+                }
+            }
+        }, 
+        "setObject": {
+            "parameters": {
+                "person": {
+                    "type": "object", 
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }, 
+                        "age": {
+                            "type": "integer"
+                        }, 
+                        "weight": {
+                            "type": "number"
+                        }, 
+                        "nice" :
+                        {
+                            "type": "boolean"
+                        }, 
+                        "arrayOfInteger": {
+                            "type": "array", 
+                            "items": {
+                                "type": "integer"
+                            }
+                        } 
+                    }
+                }
+            }
+        }, 
+        "getObject": {
+            "response": {
+                "type": "object", 
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    }, 
+                    "age": {
+                        "type": "integer"
+                    }, 
+                    "weight": {
+                        "type": "number"
+                    }, 
+                    "nice" :
+                    {
+                        "type": "boolean"
+                    }, 
+                    "arrayOfInteger": {
+                        "type": "array", 
+                        "items": {
+                            "type": "integer"
+                        }
+                    } 
+                }
+            }
+        }
+    }, 
+    "events": {
+        "voidEvent": {
+            "parameters": {}
+        }, 
+        "boolEvent": {
+            "parameters": {
+                "param_1": {
+                    "type": "boolean"
+                }
+            }
+        }, 
+        "numberEvent": {
+            "parameters": {
+                "param_1": {
+                    "type": "number"
+                }
+            }
+        }, 
+        "objectEvent": {
+            "parameters": {
+                "param_1": {
+                    "type": "object", 
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }, 
+                        "age": {
+                            "type": "integer"
+                        }, 
+                        "weight": {
+                            "type": "number"
+                        }, 
+                        "nice" :
+                        {
+                            "type": "boolean"
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}
