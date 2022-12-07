@@ -1,0 +1,21 @@
+{
+    "name": "pendulum", 
+    "revision": "1.0.0", 
+    "properties": {
+        "x": {
+            "description": "displacement of the linear axis",
+            "unit": "m",
+            "type": "number"
+        }, 
+        "theta": {
+            "description": "angle of the pendulum rotary axis",
+            "unit": "rad",
+            "type": "number"
+        }, 
+        "ppmp": {
+            "description": "angle and displacement aggregated in PPMP format", 
+            "unit": "PPMP Measurement message, v3", 
+            "type": "string"
+        }
+    }
+}
