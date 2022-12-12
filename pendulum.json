@@ -11,7 +11,9 @@
             "description": "angle of the pendulum rotary axis",
             "unit": "rad",
             "type": "number"
-        }, 
+        }
+    }, 
+    "events": {
         "ppmp": {
             "description": "angle and displacement aggregated in PPMP format", 
             "unit": "PPMP Measurement message, v3", 
