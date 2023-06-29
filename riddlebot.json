@@ -1,0 +1,71 @@
+{
+  "name": "riddlebot",
+  "revision": "0.0.1",
+  "description": "gives you mathematical tasks to solve. Register as a challenger, solve ten consecutive tasks and receive the code word",
+  "properties": {
+    "current_task": {
+      "type": "object",
+      "description": "task to solve",
+      "properties": {
+        "task_id": {
+          "type": "string"
+        },
+        "first": {
+          "type": "number"
+        },
+        "second": {
+          "type": "number"
+        },
+        "operand": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "events": {
+    "challenger_won": {
+      "description": "triggered when a challenger solved ten consecutive tasks",
+      "parameters": {
+        "winner": {
+          "type": "string"
+        },
+        "code_word": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "operations": {
+    "start_new_session": {
+      "description": "register a new challenger.",
+      "parameters": {
+        "name": {
+          "type": "string",
+          "description": "name of the challenger"
+        }
+      },
+      "response": {
+        "type": "string",
+        "description": "session_id for the new challenger. Session is invalidated after 2 mins"
+      }
+    },
+    "solve_task": {
+      "parameters": {
+        "session_id": {
+          "type": "string",
+          "description": "name of the challenger"
+        },
+        "question_id": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "number"
+        }
+      },
+      "response": {
+        "description": "true if answer correct, false if wrong answer or wrong id. A false answer automatically ends the session",
+        "type": "boolean"
+      }
+    }
+  }
+}
