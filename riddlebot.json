@@ -5,7 +5,7 @@
   "properties": {
     "current_task": {
       "type": "object",
-      "description": "task to solve",
+      "description": "task to solve. Task is renewed every three seconds or as soon as a correct answer has been given",
       "properties": {
         "task_id": {
           "type": "string"
@@ -55,7 +55,7 @@
           "type": "string",
           "description": "name of the challenger"
         },
-        "question_id": {
+        "task_id": {
           "type": "string"
         },
         "answer": {
