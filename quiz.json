@@ -1,0 +1,74 @@
+{
+  "name": "quiz",
+  "revision": "0.0.1",
+  "description": "API for participants to take part in live quiz",
+  "properties": {
+    "current_question": {
+      "type": "object",
+      "required": [
+        "question",
+        "answer",
+        "question_id"
+      ],
+      "properties": {
+        "question_id": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "object",
+          "required": [
+            "answertype"
+          ],
+          "properties": {
+            "answertype": {
+              "type": "string",
+              "enum": [
+                "number",
+                "mc",
+                "text",
+                "none"
+              ]
+            },
+            "options": {
+              "type": "object",
+              "properties": {
+                "number_limits": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "mc_options": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "operations": {
+    "giveAnswer": {
+      "parameters": {
+        "name": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "string"
+        },
+        "question_id": {
+          "type": "string"
+        }
+      },
+      "response": {
+        "type": "boolean"
+      }
+    }
+  }
+}
